@@ -1,2 +1,5 @@
-<angular-monorepo-nx-welcome></angular-monorepo-nx-welcome>
-<router-outlet></router-outlet>
+<!-- <angular-monorepo-nx-welcome></angular-monorepo-nx-welcome> -->
+<div>
+    <app-header (logoutEvent)="logout()" (GoToHomeEvent)="navigateToHome()"  (GoToLoginEvent)="navigateToLogin()"></app-header>
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <span>Student Portal Application</span>
+    <span class="spacer"></span>
+    <ng-container *ngIf="(this.loginFacadeService.IsStudentLoggedIn$ | async) === true; else loginButton">
+        <button mat-button (click) = "goToHome()">Home</button>
+        <button mat-button (click)="logout()">Logout</button>
+      </ng-container>
+      <ng-template #loginButton>
+        <button mat-button (click) = "goToLogin()">Login</button>
+      </ng-template>
+  </mat-toolbar>
